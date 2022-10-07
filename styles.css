@@ -1,0 +1,111 @@
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body , main{
+    width: 100%;
+    min-height: 100vh;
+    font-size: 15px;
+}
+
+main{
+    padding: 1rem;
+    background-color: var(--very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container{
+    border-radius: 0.8rem;
+    max-width: 22rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+
+.section{
+    background-color: var(--bright-orange);
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--transparent-white);
+}
+
+.section:nth-child(2n){
+    background-color: var(--dark-cyan);
+}
+
+.section:nth-child(3n){
+    background-color: var(--very-dark-cyan);
+
+}
+
+.section .section--button-more{
+    color: var(--bright-orange);
+}
+.section:nth-child(2n) .section--button-more{
+    color: var(--dark-cyan);
+}
+.section:nth-child(3n) .section--button-more{
+    color: var(--very-dark-cyan);
+}
+
+
+.section--icon{
+    width: 64px;
+    height: auto;
+}
+
+.section--title{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    color: var(--very-light-gray);
+}
+
+
+.section--description{
+    line-height: 1.8rem;
+}
+
+.section--button-more{
+    text-decoration: none;
+    border-radius: 200px;
+    background-color: var(--very-light-gray);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center !important;
+    width: 10rem;
+    font-weight: 400;
+}
+
+.section--button-more:hover{
+    background-color: rgba(255,255,255,0);
+    box-shadow: inset 0 0 0 2px  var(--very-light-gray);
+    color: var(--very-light-gray) !important;
+}
+
+
+@media(min-width:840px){
+    .section-container{
+        max-width: 63rem;
+    }
+
+    .section--button-more{
+        margin-top: 3rem;
+    }
+}
